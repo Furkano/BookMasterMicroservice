@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.0.1"/>
+    <PackageReference Include="MassTransit" Version="7.1.3-develop.3212"/>
+    <PackageReference Include="MediatR" Version="9.0.0"/>
+    <PackageReference Include="NEST" Version="7.10.1"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj"/>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj"/>
+  </ItemGroup>
+</Project>

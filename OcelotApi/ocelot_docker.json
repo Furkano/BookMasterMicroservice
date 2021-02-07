@@ -1,0 +1,53 @@
+{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/api/Order",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "order_api",
+            "Port": "80"
+          }
+        ],
+        "UpstreamPathTemplate": "/Order",
+        "UpstreamHttpMethod": [ "Post" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/Order/GetOrderWithUsername/{username}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "order_api",
+            "Port": "80"
+          }
+        ],
+        "UpstreamPathTemplate": "/Order/{username}",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/Order/GetOrderWithId/{id}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "order_api",
+            "Port": "80"
+          }
+        ],
+        "UpstreamPathTemplate": "/Order/GetOrderWithId/{id}",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/Book",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "product_command_api",
+            "Port": "80"
+          }
+        ],
+        "UpstreamPathTemplate": "/Book",
+        "UpstreamHttpMethod": [ "Post" ]
+      }
+    ]
+}
+  

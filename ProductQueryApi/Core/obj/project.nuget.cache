@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "ooarQrqALa2DmWqmpKm41qLXH6B6ozEK54mQu9VFjAaCdktFm5BvQRxuu5IjcY4QZkWoljj38Ncv32ACaOFKAw==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductQueryApi\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\soysa\\.nuget\\packages\\elasticsearch.net\\7.10.1\\elasticsearch.net.7.10.1.nupkg.sha512",
+    "C:\\Users\\soysa\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\soysa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\soysa\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\soysa\\.nuget\\packages\\nest\\7.10.1\\nest.7.10.1.nupkg.sha512",
+    "C:\\Users\\soysa\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\soysa\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

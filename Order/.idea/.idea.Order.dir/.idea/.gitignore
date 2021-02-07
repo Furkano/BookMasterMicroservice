@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.Order.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\soysa\OneDrive\Masaüstü\BookMasterMicroservice\Order\.idea\.idea.Order.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

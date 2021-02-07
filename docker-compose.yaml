@@ -1,0 +1,181 @@
+version: '3'
+services:
+
+  categorydb:
+    image: mongo
+    container_name: categorydb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmindb2
+      MONGO_INITDB_ROOT_PASSWORD: secretdb2
+    ports:
+      - 27017:27017
+  
+  product_command_db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: product_command_db
+    restart: always
+    ports:
+      - "2018:1433"
+    environment:
+      SA_PASSWORD: "Pa55w0rd!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    volumes: 
+      - /usr/work/import-data.sh & /opt/mssql/bin/sqlservr
+
+  basket_db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: basket_db
+    restart: always
+    ports: 
+      - "2020:1433"
+    environment: 
+      SA_PASSWORD: "Pa55w0rd!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    volumes: 
+      - /usr/work/import-data.sh & /opt/mssql/bin/sqlservr
+  
+  order_db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: order_db
+    restart: always
+    ports: 
+      - "2025:1433"
+    environment: 
+      SA_PASSWORD: "Pa55w0rd!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    volumes: 
+      - /usr/work/import-data.sh & /opt/mssql/bin/sqlservr
+
+  redis_db:
+    image: 'bitnami/redis:latest'
+    container_name: redis_db
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+     - "6379:6379"
+    volumes:
+      - ./redis-data:/var/lib/redis
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+
+
+
+  elsatiksearch_db:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.1
+    container_name: elsatiksearch_db
+    restart: always
+    environment:
+      - discovery.type=single-node
+      - cluster.name=es-docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports: 
+      - 9200:9200
+    
+  myrabbitmq:
+    image: rabbitmq:3-management
+    container_name: myrabbitmq
+    volumes:
+      - ./.docker/rabbitmq/etc/:/etc/rabbitmq/
+      - ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
+      - ./.docker/rabbitmq/logs/:/var/log/rabbitmq/
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest22
+    ports: 
+      - 5672:5672
+  
+  
+
+  product_query_api:
+    container_name: product_query_api
+    build: ProductQueryApi/
+    ports: 
+      - "8010:80"
+    environment:
+      - ASPNETCORE_URLS=http://+
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ElasticSearchOptions:ConnectionString:HostUrls=http://elsatiksearch_db:9200/
+      - DockerCategoryApiBaseUrl=http://category_api:80/api/Category/"
+      - RabbitMQConf:Uri=rabbitmq://guest:guest22@myrabbitmq/
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+    depends_on: 
+      - elsatiksearch_db
+      - myrabbitmq
+  
+  product_command_api:
+    container_name: product_command_api
+    build: ProductCommandApi/
+    ports: 
+      - "8000:80"
+    environment:
+      - ASPNETCORE_URLS=http://+
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings:ProductCommandConnection=Server=product_command_db;Initial Catalog=product_command_db;User Id=sa;Password=Pa55w0rd!;
+      - RabbitMQConf:Uri=rabbitmq://guest:guest22@myrabbitmq/
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+    depends_on: 
+      - product_command_db
+  
+
+  category_api: 
+    container_name: category_api
+    build: Category/
+    ports: 
+      - "8020:80"
+    environment:
+      - ASPNETCORE_URLS=http://+
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoSettings:ConnectionString=mongodb://mongoadmindb2:secretdb2@categorydb:27017/?authSource=admin
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+    depends_on: 
+      - categorydb
+  
+  basket_api: 
+    container_name: basket_api
+    build: Basket/
+    ports: 
+      - "8030:80"
+    environment:
+      - ASPNETCORE_URLS=http://+
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RabbitMQConf:Uri=rabbitmq://guest:guest22@myrabbitmq/
+      - ConnectionStrings:BasketConnection=Server=basket_db;Initial Catalog=basket_db;User Id=sa;Password=Pa55w0rd!;
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+    depends_on: 
+      - basket_db
+  
+  order_api: 
+    container_name: order_api
+    build: Order/
+    ports: 
+      - "8040:80"
+    environment:
+      - ASPNETCORE_URLS=http://+
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RabbitMQConf:Uri=rabbitmq://guest:guest22@myrabbitmq/
+      - ConnectionStrings:OrderConnection=Server=order_db;Initial Catalog=order_db;User Id=sa;Password=Pa55w0rd!;
+      - ConnectionStrings:Redis=redis_db 
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+    depends_on: 
+      - order_db
+      - redis_db
+
+  ocelot_api:
+    container_name: ocelot_api
+    build: OcelotApi/
+    ports: 
+      - "8060:80"
+    environment:
+      - ASPNETCORE_URLS=http://+
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets

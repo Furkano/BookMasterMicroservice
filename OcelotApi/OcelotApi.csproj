@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>BookMasterMicroservice-OcelotApi-6e33feb2-d1d5-4867-b31c-ec94d727a2a5</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3"/>
+    <PackageReference Include="Ocelot" Version="17.0.0"/>
+  </ItemGroup>
+</Project>
