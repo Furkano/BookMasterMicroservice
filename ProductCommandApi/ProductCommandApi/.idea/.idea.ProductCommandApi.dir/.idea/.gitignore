@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.ProductCommandApi.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\soysa\OneDrive\Masaüstü\BookMasterMicroservice\ProductCommandApi\ProductCommandApi\.idea\.idea.ProductCommandApi.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

@@ -1,0 +1,352 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ProductCommandApi\\ProductCommandApi.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ApplicationCommand\\ApplicationCommand.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ApplicationCommand\\ApplicationCommand.csproj",
+        "projectName": "ApplicationCommand",
+        "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ApplicationCommand\\ApplicationCommand.csproj",
+        "packagesPath": "C:\\Users\\soysa\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ApplicationCommand\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\soysa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj": {
+                "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj"
+              },
+              "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj": {
+                "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[7.1.3-develop.3212, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj",
+        "projectName": "CoreCommand",
+        "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj",
+        "packagesPath": "C:\\Users\\soysa\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\soysa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj",
+        "projectName": "InfrastructureCommand",
+        "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj",
+        "packagesPath": "C:\\Users\\soysa\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\soysa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj": {
+                "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ProductCommandApi\\ProductCommandApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ProductCommandApi\\ProductCommandApi.csproj",
+        "projectName": "ProductCommandApi",
+        "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ProductCommandApi\\ProductCommandApi.csproj",
+        "packagesPath": "C:\\Users\\soysa\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ProductCommandApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\soysa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ApplicationCommand\\ApplicationCommand.csproj": {
+                "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\ApplicationCommand\\ApplicationCommand.csproj"
+              },
+              "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj": {
+                "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\CoreCommand\\CoreCommand.csproj"
+              },
+              "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj": {
+                "projectPath": "c:\\Users\\soysa\\OneDrive\\Masaüstü\\BookMasterMicroservice\\ProductCommandApi\\InfrastructureCommand\\InfrastructureCommand.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[7.1.3-develop.3212, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.1.3-develop.3212, )"
+            },
+            "MassTransit.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.3-develop.3212, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[7.1.3-develop.3212, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.1, )",
+              "noWarn": [
+                "NU1605"
+              ]
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[5.0.1, )",
+              "noWarn": [
+                "NU1605"
+              ]
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
